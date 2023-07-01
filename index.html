@@ -5,9 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!---->
+    <!-- Header -->
+    <!-- <div class="header">
+      <h2>Library</h2>
+    </div> -->
+
+    <!-- Books -->
+    <!-- <div class="books-container">
+      <div class="book">
+        <h4>Title</h4>
+        <h6>Author</h6>
+        <p>Pages</p>
+        <button>Read</button>
+      </div>
+    </div> -->
+
+    <!-- TODO: Style Button -->
+    <button class="add-book-btn">Add Book</button>
+
+    <!-- Add Book Form  -->
+    <div class="form-container">
+      <form class="form">
+        <h2>Add New Book</h2>
+        <input type="text" name="title" placeholder="Title" class="input" />
+
+        <input type="text" name="author" placeholder="Author" class="input" />
+
+        <input type="number" name="pages" placeholder="Pages" class="input" />
+
+        <div>
+          <label for="readStatus">Have you read it yet?</label>
+          <input type="checkbox" name="readStatus" />
+        </div>
+        <input type="submit" value="Add" class="button" />
+      </form>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
