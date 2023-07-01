@@ -29,7 +29,7 @@ body {
 .form {
   position: relative;
   background-color: var(--color-light);
-  padding: 2rem 2.5rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -53,9 +53,10 @@ body {
   caret-color: var(--color-medium);
   color: var(--color-medium);
   accent-color: var(--color-primary);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   border: none;
+  font-size: 1rem;
 }
 
 .form input:focus {
@@ -64,6 +65,17 @@ body {
 
 .form input::placeholder {
   color: var(--color-light);
+}
+
+.form .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form .checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .button {
