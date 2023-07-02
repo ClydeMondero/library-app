@@ -16,11 +16,27 @@ body {
   color: var(--color-dark);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark);
+}
+
 .container {
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr;
+  overflow: auto;
 }
 
 .header {
@@ -136,4 +152,52 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   align-self: stretch;
+}
+
+.books-container {
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.book {
+  position: relative;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  max-height: 250px;
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.book button {
+  align-self: stretch;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.read {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+}
+
+.not-read {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.remove {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.remove:hover {
+  background-color: var(--color-medium);
 }
