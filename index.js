@@ -10,13 +10,14 @@ function Book(id, title, author, pages, read) {
   this.pages = pages;
   this.read = read;
   this.bookInfo = () => {
-    console.log(`${title} by ${author}, ${pages} pages ${read}`);
+    console.log(`${id} ${title} by ${author}, ${pages} pages ${read}`);
   };
 }
 
 //* Adds a book to the library array
 function addBook(title, author, pages, read) {
-  let book = new Book(i, title, author, pages, read);
+  console.log("Book Added");
+  const book = new Book(i, title, author, pages, read);
 
   library.push(book);
   i++;
@@ -25,6 +26,7 @@ function addBook(title, author, pages, read) {
 //* Displays every book in the library array
 function displayBooks() {
   booksContainer.replaceChildren();
+  console.log(library);
   library.forEach((book) => {
     book.bookInfo();
 
@@ -118,16 +120,20 @@ addBookBtn.addEventListener("click", () => {
 
   form.addEventListener("submit", (e) => e.preventDefault());
 
-  addBtn.addEventListener("click", () => {
-    const title = document.querySelector("#title").value;
-    const author = document.querySelector("#author").value;
-    const pages = document.querySelector("#pages").value;
-    const read = document.querySelector("#readStatus").checked;
+  addBtn.addEventListener(
+    "click",
+    () => {
+      const title = document.querySelector("#title").value;
+      const author = document.querySelector("#author").value;
+      const pages = document.querySelector("#pages").value;
+      const read = document.querySelector("#readStatus").checked;
 
-    addBook(title, author, pages, read);
-    hideForm();
-    displayBooks();
-  });
+      addBook(title, author, pages, read);
+      hideForm();
+      displayBooks();
+    },
+    { once: true }
+  );
 });
 
 formContainer.addEventListener("click", (e) => {
