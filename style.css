@@ -16,7 +16,44 @@ body {
   color: var(--color-dark);
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 1rem 2rem;
+}
+
+.btn-container {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-book-btn {
+  padding: 1rem 2rem;
+  background-color: var(--color-medium);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--color-dark);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 3ms;
+}
+
+.add-book-btn:hover {
+  background-color: var(--color-light);
+}
+
 .form-container {
+  background-color: rgba(104, 105, 99, 0.5);
   position: absolute;
   width: 100vw;
   height: 100vh;

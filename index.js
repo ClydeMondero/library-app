@@ -30,16 +30,19 @@
 //* Shows/Hides Add Book Form
 const addBookBtn = document.querySelector(".add-book-btn");
 const formContainer = document.querySelector(".form-container");
+const booksContainer = document.querySelector(".books-container");
 
 addBookBtn.addEventListener("click", () => {
   formContainer.style.display = "flex";
   addBookBtn.style.display = "none";
+  booksContainer.style.display = "none";
 });
 
 formContainer.addEventListener("click", (e) => {
   if (e.target.matches(".form-container")) {
     formContainer.style.display = "none";
     addBookBtn.style.display = "block";
+    booksContainer.style.display = "block";
 
     //*Clears the input fields
     formContainer.querySelectorAll(".input").forEach((input) => {

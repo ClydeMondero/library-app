@@ -13,42 +13,47 @@
     />
   </head>
   <body>
-    <!-- Header -->
-    <!-- <div class="header">
-      <h2>Library</h2>
-    </div> -->
-
-    <!-- Books -->
-    <!-- <div class="books-container">
-      <div class="book">
-        <h4>Title</h4>
-        <h6>Author</h6>
-        <p>Pages</p>
-        <button>Read</button>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h2>Library</h2>
       </div>
-    </div> -->
 
-    <!-- TODO: Style Button -->
-    <button class="add-book-btn">Add Book</button>
+      <!-- TODO: Style Button -->
 
-    <!-- Add Book Form  -->
-    <div class="form-container">
-      <form class="form">
-        <h2>Add New Book</h2>
-        <input type="text" name="title" placeholder="Title" class="input" />
+      <div class="btn-container">
+        <button class="add-book-btn">+ Add book</button>
+      </div>
 
-        <input type="text" name="author" placeholder="Author" class="input" />
+      <!-- Add Book Form -->
+      <div class="form-container">
+        <form class="form">
+          <h2>Add new book</h2>
+          <input type="text" name="title" placeholder="Title" class="input" />
 
-        <input type="number" name="pages" placeholder="Pages" class="input" />
+          <input type="text" name="author" placeholder="Author" class="input" />
 
-        <div class="checkbox-container">
-          <label for="readStatus"
-            ><strong>Have you read it yet?</strong>
-          </label>
-          <input type="checkbox" name="readStatus" class="checkbox" />
+          <input type="number" name="pages" placeholder="Pages" class="input" />
+
+          <div class="checkbox-container">
+            <label for="readStatus"
+              ><strong>Have you read it yet?</strong>
+            </label>
+            <input type="checkbox" name="readStatus" class="checkbox" />
+          </div>
+          <input type="submit" value="Add" class="button" />
+        </form>
+      </div>
+
+      <!-- Books -->
+      <div class="books-container">
+        <div class="book">
+          <h4>Title</h4>
+          <h6>Author</h6>
+          <p>Pages</p>
+          <button>Read</button>
         </div>
-        <input type="submit" value="Add" class="button" />
-      </form>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
