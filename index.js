@@ -55,6 +55,18 @@ function displayBooks() {
 
     booksContainer.appendChild(bookContainer);
 
+    read.addEventListener("click", () => {
+      if (book.read) {
+        book.read = false;
+        read.textContent = "Not Read";
+        read.classList.replace("read", "not-read");
+      } else {
+        book.read = true;
+        read.textContent = "Read";
+        read.classList.replace("not-read", "read");
+      }
+    });
+
     removeBtn.addEventListener("click", () => {
       library.splice(book.id, 1);
       displayBooks();
