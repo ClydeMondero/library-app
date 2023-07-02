@@ -99,8 +99,6 @@ const form = document.querySelector(".form");
 const checkBox = document.querySelector(".checkbox");
 const addBtn = document.querySelector(".button");
 
-addBook("Percy Jackson", "Rick Riordian", 250, false);
-
 displayBooks();
 
 addBookBtn.addEventListener("click", () => {
