@@ -27,28 +27,52 @@
 //   console.log(book.bookInfo());
 // });
 
-//* Shows/Hides Add Book Form
-const addBookBtn = document.querySelector(".add-book-btn");
-const formContainer = document.querySelector(".form-container");
-const booksContainer = document.querySelector(".books-container");
+//* Resets add book form
+function resetForm(input) {
+  input.value = "";
+  checkBox.checked = false;
+}
 
-addBookBtn.addEventListener("click", () => {
+//* Shows the library
+function showLibrary() {
+  formContainer.style.display = "none";
+  addBookBtn.style.display = "block";
+  booksContainer.style.display = "block";
+}
+
+//*Hides add book form
+function hideForm(e) {
+  if (e.target.matches(".form-container")) {
+    form.classList.replace("open", "close");
+    form.addEventListener("animationend", showLibrary, { once: true });
+
+    formContainer.querySelectorAll(".input").forEach((input) => {
+      resetForm(input);
+    });
+  }
+}
+
+//* Shows add book form
+function showForm() {
   formContainer.style.display = "flex";
+  form.classList.replace("close", "open");
   addBookBtn.style.display = "none";
   booksContainer.style.display = "none";
+}
+
+const addBookBtn = document.querySelector(".add-book-btn");
+const booksContainer = document.querySelector(".books-container");
+
+const formContainer = document.querySelector(".form-container");
+const form = document.querySelector(".form");
+const checkBox = document.querySelector(".checkbox");
+
+addBookBtn.addEventListener("click", () => {
+  showForm();
 });
 
 formContainer.addEventListener("click", (e) => {
-  if (e.target.matches(".form-container")) {
-    formContainer.style.display = "none";
-    addBookBtn.style.display = "block";
-    booksContainer.style.display = "block";
-
-    //*Clears the input fields
-    formContainer.querySelectorAll(".input").forEach((input) => {
-      input.value = "";
-    });
-  }
+  hideForm(e);
 });
 
 //TODO: Form Validation (required, duplicate, invalid inputs)

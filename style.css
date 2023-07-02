@@ -42,7 +42,7 @@ body {
   border: none;
   border-radius: 0.5rem;
   color: var(--color-dark);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 3ms;
@@ -73,10 +73,26 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  animation: popout 0.5s ease;
 }
 
-@keyframes popout {
+.open {
+  animation: popOut 0.3s ease;
+}
+
+.close {
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes popOut {
   from {
     transform: scale(0);
   }
